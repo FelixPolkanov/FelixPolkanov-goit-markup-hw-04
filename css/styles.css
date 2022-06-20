@@ -6,6 +6,7 @@
   --background-main-color: #ffffff;
   --background-secondary-color: #2f303a;
   --button-background-color: #2196f3;
+  --icon-main-color: #afb1b8;
   --portfolio-list-gap: 30px;
 }
 
@@ -101,7 +102,6 @@ img {
 .site-nav {
   display: flex;
   padding-left: 0;
-  /* margin-left: 93px; */
 }
 
 .site-nav .item {
@@ -162,10 +162,40 @@ img {
   color: var(--accent-color);
 }
 
+/* оформление svg для e-mail */
+.icon-envelope {
+  margin-right: 10px;
+  vertical-align: middle;
+  fill: var(--text-main-color);
+}
+.e-mail-tel .icon-envelope:hover {
+  fill: var(--accent-color);
+}
+
+/* оформление svg для telephone */
+.icon-smartphone {
+  margin-right: 10px;
+  vertical-align: middle;
+  fill: var(--text-main-color);
+}
+
+.e-mail-tel .icon-smartphone:hover {
+  fill: var(--accent-color);
+}
+
 /* стили hero */
 .hero {
   padding: 200px 0;
   background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-overlay.jpg');
+  background-repeat: no-repeat;
+  background-position: centre;
+  background-size: contain;
 }
 
 .hero-title {
@@ -249,9 +279,10 @@ img {
   line-height: 1.71;
 }
 
-/* стили заголовков секции 3,4 */
+/* стили заголовков секции 3,4,5 */
 .title-our-work,
-.title-team {
+.title-team,
+.title-our-clients {
   margin-bottom: 0;
   padding-top: 0;
   margin-bottom: 50px;
@@ -262,6 +293,30 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+/* стили svg-иконок преимущества */
+.discription-icons {
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.icon-antenna-location {
+  padding: 25px 102px;
+}
+.icon-clock-location {
+  padding: 25px 102px;
+}
+.icon-diagram-location {
+  padding: 33px 100px;
+}
+.icon-astronaut-location {
+  padding: 30px 115px 30px 100px;
+}
+
 .feature {
   padding-top: 0;
 }
@@ -289,7 +344,7 @@ img {
   padding-right: 0;
 }
 .container-team .item {
-  background-color: #fff;
+  background-color: var(--background-main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -315,10 +370,68 @@ img {
 /* стили списка профессий персонала */
 .team-position {
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+/* розметка контейнера списка соц/сетей персонала */
+.container-social-icons {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.social-icons:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-elipse {
+  display: block;
+  border: none;
+  align-items: center;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-main-color);
+  background-color: var(--background-main-color);
+}
+
+.icon-elipse:hover {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* стили секции Постоянные клиенты */
+.container-clients {
+  display: flex;
+}
+
+/* стили svg-иконок Постоянные клиенты */
+.clients-blocks {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-main-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.clients-card:not(:last-child) {
+  margin-right: 30px;
+}
+.icon-clients {
+  fill: var(--icon-main-color);
+}
+
+.clients-blocks:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.icon-clients:hover {
+  fill: var(--accent-color);
 }
 
 /* стили адреса футера */
@@ -336,7 +449,9 @@ img {
 }
 
 /* контейнер для футера */
-
+.container-footer {
+  display: flex;
+}
 .footer-padding {
   padding: 60px 0;
 }
