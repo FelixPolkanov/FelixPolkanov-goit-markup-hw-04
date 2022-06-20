@@ -28,7 +28,7 @@ body {
   margin-bottom: 0;
 }
 
-/* класс для отключения подчеркивания стилей */
+/* класс для отключения подчеркивания ссылок */
 .link,
 .link1 {
   text-decoration: none;
@@ -50,7 +50,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* общий класс для отступа секций */
+/* общий класс для паддинга секций */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -63,10 +63,12 @@ img {
   padding-right: 15px;
   width: 1200px;
 }
-
+/* указатель на ссылки */
 .button {
   cursor: pointer;
 }
+
+/* HEADER */
 
 /* доп/настройки секции хедера */
 .container-header {
@@ -127,7 +129,7 @@ img {
   color: var(--accent-color);
 }
 
-/* єффект нахождения на текущей странице */
+/* эффект присутствия на текущей странице */
 .current {
   color: var(--accent-color);
 }
@@ -162,7 +164,7 @@ img {
   color: var(--accent-color);
 }
 
-/* оформление svg для e-mail */
+/* оформление svg-иконки для e-mail */
 .icon-envelope {
   margin-right: 10px;
   vertical-align: middle;
@@ -172,7 +174,7 @@ img {
   fill: var(--accent-color);
 }
 
-/* оформление svg для telephone */
+/* оформление svg-иконки для telephone */
 .icon-smartphone {
   margin-right: 10px;
   vertical-align: middle;
@@ -183,7 +185,9 @@ img {
   fill: var(--accent-color);
 }
 
-/* стили hero */
+/* HERO */
+
+/* стили секции hero */
 .hero {
   padding: 200px 0;
   background-color: #2f303a;
@@ -434,7 +438,9 @@ img {
   fill: var(--accent-color);
 }
 
-/* стили адреса футера */
+/* FOOTER */
+
+/* стили  лого футера */
 .container-logo-footer {
   margin-right: 0;
   margin-bottom: 20px;
@@ -448,13 +454,56 @@ img {
   color: #ffffff;
 }
 
-/* контейнер для футера */
+/* контейнеры для футера */
 .container-footer {
   display: flex;
 }
-.footer-padding {
-  padding: 60px 0;
+
+.container-footer-joinus {
+  padding-top: 12px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  margin-bottom: 0;
 }
+/* розметка списка соц/сетей и заголовка футера */
+
+.container-social-icons-footer {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.social-icons-footer:not(:last-child) {
+  margin-right: 10px;
+}
+
+.title-footer-joinus {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.icon-elipse-footer {
+  display: block;
+  border: none;
+  align-items: center;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-elipse-footer:hover {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* стили адреса футера */
 .container-adress-footer .item {
   padding-left: 0;
   margin-bottom: 9px;
@@ -466,7 +515,9 @@ img {
 .container-adress-footer {
   padding-left: 0;
 }
-
+.footer-padding {
+  padding: 60px 0;
+}
 .footer-adress {
   color: #ffffff;
   font-style: normal;
@@ -525,6 +576,8 @@ img {
 .button-portfolio-menu:focus {
   color: #ffffff;
   background-color: var(--button-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-container {
@@ -542,10 +595,16 @@ img {
   flex-basis: calc((100% - 90px) / 3);
   border: 1px solid #eeeeee;
   background: #ffffff;
+  box-shadow: none;
 }
 
 .portfolio-items-set {
   padding: 20px 24px;
+}
+
+.portfolio-container > .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* стили заголовков в портфолио */
