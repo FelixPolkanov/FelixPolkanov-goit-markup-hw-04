@@ -115,7 +115,8 @@ img {
 }
 
 .site-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-main-color);
@@ -150,7 +151,8 @@ img {
 }
 
 .e-mail-tel .link1 {
-  /* display: block; */
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--text-main-color);
@@ -164,25 +166,11 @@ img {
   color: var(--accent-color);
 }
 
-/* оформление svg-иконки для e-mail */
+/* оформление svg-иконки для e-mail и для telephone */
+.icon-smartphone,
 .icon-envelope {
   margin-right: 10px;
-  vertical-align: middle;
-  fill: var(--text-main-color);
-}
-.e-mail-tel .icon-envelope:hover {
-  fill: var(--accent-color);
-}
-
-/* оформление svg-иконки для telephone */
-.icon-smartphone {
-  margin-right: 10px;
-  vertical-align: middle;
-  fill: var(--text-main-color);
-}
-
-.e-mail-tel .icon-smartphone:hover {
-  fill: var(--accent-color);
+  fill: currentcolor;
 }
 
 /* HERO */
@@ -194,15 +182,17 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  height: 600px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero-overlay.jpg');
   background-repeat: no-repeat;
-  background-position: centre;
+  background-position: center;
   background-size: cover;
 }
 
 .hero-title {
+  width: 693px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   text-align: center;
   color: #ffffff;
@@ -300,25 +290,13 @@ img {
 
 /* стили svg-иконок преимущества */
 .discription-icons {
-  display: block;
-  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   background-color: #f5f4fa;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.icon-antenna-location {
-  padding: 25px 102px;
-}
-.icon-clock-location {
-  padding: 25px 102px;
-}
-.icon-diagram-location {
-  padding: 33px 100px;
-}
-.icon-astronaut-location {
-  padding: 30px 115px 30px 100px;
 }
 
 .feature {
@@ -384,18 +362,16 @@ img {
 .container-social-icons {
   display: flex;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .social-icons:not(:last-child) {
   margin-right: 10px;
 }
 .icon-elipse {
-  display: block;
+  display: flex;
   border: none;
   align-items: center;
-  padding: 12px;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -415,12 +391,13 @@ img {
 
 /* стили svg-иконок Постоянные клиенты */
 .clients-blocks {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
-  padding: 16px 32px;
 }
 
 .clients-card:not(:last-child) {
@@ -430,11 +407,13 @@ img {
   fill: var(--icon-main-color);
 }
 
-.clients-blocks:hover {
+.clients-blocks:hover,
+.clients-blocks:focus {
   border: 1px solid var(--accent-color);
 }
 
-.icon-clients:hover {
+.clients-blocks:hover .icon-clients,
+.clients-blocks:focus .icon-clients {
   fill: var(--accent-color);
 }
 
@@ -457,12 +436,11 @@ img {
 /* контейнеры для футера */
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .container-footer-joinus {
-  padding-top: 12px;
   padding-bottom: 0;
-  margin-bottom: 20px;
   margin-left: 70px;
   margin-bottom: 0;
 }
@@ -480,8 +458,9 @@ img {
 }
 
 .title-footer-joinus {
+  margin-bottom: 20px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -560,6 +539,7 @@ img {
   margin-right: 0;
 }
 .button-portfolio-menu {
+  cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
   border: 0 solid #f5f4fa;
@@ -595,14 +575,18 @@ img {
   flex-basis: calc((100% - 90px) / 3);
   border: 1px solid #eeeeee;
   background: #ffffff;
-  box-shadow: none;
 }
 
 .portfolio-items-set {
   padding: 20px 24px;
 }
+.portfolio-container .portfolio-hvr {
+  display: block;
+  box-shadow: none;
+}
 
-.portfolio-container > .item:hover {
+.portfolio-container .portfolio-hvr:hover,
+.portfolio-container .portfolio-hvr:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
